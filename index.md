@@ -710,6 +710,39 @@ About fly lady.
 
 </style>
 
+## Визуальные юнит тесты
+{: .unit-tests }
+
+Было:<br/>
+![](pictures/gemini/chrome~ref_web.png)
+
+Стало:<br/>
+![](pictures/gemini/chrome~current_web.png)
+
+Видно на тесте:<br/>
+![](pictures/gemini/chrome~diff_web.png)
+{: .next }
+
+<style>
+.unit-tests p {
+
+margin-bottom: 25px;
+
+}
+</style>
+
+## Автоматизировано
+
+* `gulp test:visual`<br/>
+Сравнивает локальную копию с каноничными скриншотами
+
+TODO: вставить картинку из консоли
+
+* `gulp test:visual:update`<br/>
+Обновляет каноничные скриншоты с продакшена
+
+Можно использовать для **continuous integration**!
+
 ## Что нам дал SC5 Style Guide
 {: .benefits }
 
