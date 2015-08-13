@@ -541,9 +541,31 @@ About fly lady.
 </style>
 
 ## Живой стайлгайд
+{: .living-styleguide }
 
 <b>Живой стайлгайд</b> — это сайт с документацией, на котором компоненты отрисованы при помощи того
 же CSS, что используется в рабочем проекте.
+
+<div class="example" markdown="1">
+
+Например,
+
+* [Lonely Planet's Style Guide](http://rizzo.lonelyplanet.com/styleguide/design-elements/colours)
+* [A Pattern Apart](http://patterns.alistapart.com/)
+* [Anna Debenham's Style Guide](http://style.maban.co.uk/)
+
+</div>
+
+<style>
+.living-styleguide .example {
+  margin-top: 2em;
+}
+.living-styleguide p {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: #666;
+}
+</style>
 
 ## Разработка при помощи стайлгайда
 
