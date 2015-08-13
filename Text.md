@@ -1,67 +1,69 @@
-# Automating the style-guide-driven development
+# Сначала стайлгайд, или как перейти на компонентный подход
+## 1. Обложка
 
-## 1. Cover
+Привет! Этот доклад будет о разработке при помощи UI стайлгайда, или style-guide-driven development, очень популярном сейчас подходе.
 
-Hello. This talk is going to be about the style-giude-driven development. Currently is it a highly recommended and popular practise.
+Я буду делать больший акцент на автоматизации этого процесса, потому что некоторые его части можно поручить роботам и специальным инструментам.
 
-Particularly I will focus on automating this approach, on how we could delegate some aspects of this method to the robots and tools.
+## 2. Обо мне
 
-## 2. About me
+Прежде чем мы начнем, расскажу о себе. Меня зовут Варя, я разработчик интерфейсов, сейчас живу в Хельсинки.
 
-Before the style-guides, let me introduce myself. My name is Varya. I am a frontend developer originally from Russia and currently based in Helsinki, Finland.
+Я работаю в компании SC5 Online, мы консультируем другие компании в области фронтенда и делаем для них всякие сложные штуки. В частности, мы помогаем им внедрить у себя практику компонентного подхода к разработке веб-интерфейсов и стайлгайды.
 
-I work there for a pretty nice company called "SC5 Online". We are a consultancy company, mostly focused of front-end, preferably complex stuff. Nowadays, among other approaches we are brining the style-guide and user-interface-component practise to our client processes.
+Можно сказать, это моя основная специализация: разработка и поддержка долгоживущих проектов, библиотеки компонент, стайлгайды.
 
-So, I would say that this is my main area of expertise. For years I've been focused on long-running projects, mostly from the front-end perspective. They were sometimes massive projects and often sets of projects sharing the same interface. This is why "UI libraries" are also here in the slide. And this all resulted in the experience in style-guide-driven development, which I can share today with you guys.
+## 3. Улучшение процесса разработки
 
-## 3. Cleaning up the process
+Если в двух словах описать, что делает наша компания или что я делаю для наших клиентов, то это будет "улучшение процесса разработки".
 
-If I would be asked to desribe briefly what I do, I would answer that I clean up the process. Of course, I write CSS and JavaScript. And I write tools serving this process, you will see one of them in this talk. But this is really secondary thing.
-The main thing I do and the main goal I am trying to achieve is to fix the process, to find what is wrong with it and then fix it. Often happens, to fix it with a special tool.
+Конечно, я ещё пишу CSS и JavaScript. Но это всё второстепенные вещи, а главное дело — исправить недостатки их процесса, понять что в процессе плохо и изменить это. Часто бывает, что меняем мы это при помощи нами написанных вспомогательных инструментов.
 
-The same goes for the style guides and the style-guide-driven development. We felt that we had some problems and there should have been something, there should have been a way to change it. Here it is:
+Именно это случилось в случае стайлгайдов и разработки при помощи стайлгайдов. Нам показалось, что есть некоторые проблемы, и мы искали пути к их решению. Проблемы такие:
 
-## 4. Old school way
+## 4. Метод старой школы
 
-In here I drew an obvious, canonical way of making the websites. The process goes like that:
+Здесь я нарисовала всем нам знакомый, канонический, путь разработки веб сайтов. Обычно происходит так:
 
-- A designer creates a mockup, usually a Photoshop file. Or a set of files, one file for every page.
-- Then it goes to a person who develops HTML/CSS and they produce the actual markup. It might be the same guy who drew a design, does not matter. But this is usually a next stage in the process.
-- Once the markup is ready, this means that we have a dummy page equiped with all the needed styles and with JavaScript. Then we can bring it into real life, meanin implement it into server. This is how it goes in production.
+- Дизайнер делает макет в фотошопе. Или несколько макетов, для каждой страницы.
+- Затем макет отправляется к верстальщику или разработчику интерфейсов. На самом деле это может быть тот же самый дизайнер, но роли в проекте всё равно разные, то есть это следующая стадия процесса.
+- Когда вёрстка готова, у нас есть шаблон с нужными стилями и яваскриптом. Мы можем интегрировать его в реальный продукт, всё это отправляется на сервер и затем это видно в продакшене.
 
-For me this sounds like a typical process. Is it?
+Такой вот типичный процесс.
 
-## 5. Dash process
+## 5. Потери на процессе
 
-Now let's have a closer look at it.
+Теперь давайте приглядимся.
 
-In timeline it should look like this. Firsly there is some time to create a design. When design is ready, we can start with the markup and the last stage is the server integration. Looks perfect. The problem is that it never goes like that :-)
+С учетом времени это должно выглядеть вот так. Сначала есть выделенное время для дизайна. Затем предусмотрено время для вёрстки с учётом того, что дизайн к тому времени уже готов. Ну и немного времени на интеграцию. Выглядит чики-пуки. Но проблема в том, что так как запланировано никогда не происходит.
 
-In real life the designers need more time to create a mockup. Maybe we underestimated it. But more likely that new requirements appeared after the guys had already started. So, the design got ready later.
+В реальном мире дизайнеру требуется больше времени, чтобы нарисовать макет. Может быть изначально время было оценено неправильно. Но обычно проблема в том, что появляются новые требования уже тогда, когда они начали рисовать. В любом случае, дизайн приходит с опозданием.
 
-Then, the coding HTML/CSS process probably cannot start right away. The markup guy may have other things to do, so it goes later.
+Затем вёрстка. Мы не могли начать сразу, потому что за время ожидания уже переключились на другой проект. Начали позже. Но затем оказалось, что всё равно вёрстку нужно выбросить и начать сначала, потому что опять появились новые требования и дизайнер снова всё перерисовал.
 
-After that often happens that new stuff appeared in the mockup and we throw away the coded HTML/CSS and start again.
+До интеграции вообще никогда не доходит, потому что на слайде уже нет места.
 
-Here is does not even come to the integration, there is no place in the slide.
+И это только про одну итераццию. На самом деле интерфейс надо ещё и поддерживать и такие вещи случаются снова и снова. То есть картина на самом деле даже хуже. Каждый раз когда мы получаем новую картинку от дизайнера, надо понять, что было изменено и соответственно менять код. А может быть даже всё выкинуть.
 
-This is only for the first iteration. However when mantaining the interface, such things happen over and over again. So the picture could be even worse. Every time getting fixed drawing from a designer, we figure our what has been changed. Then provide the same changes to our coding.
+Ну и про страницы то же самое. Макеты не говорят о том, какие части общие между страницами, это нужно вычислять самим в уме, и делать это надо много раз подряд.
 
-The same goes for a set of pages. Drawing of pages does not say us what are the common parts in the interface, we need to figure it out ourselves. And we do so many times.
+## 6. Метод старой школы
 
-## 6. Old school way
+Проблемы этого метода обычно такие:
 
-Usually it results into inconsistent visual system. It takes special effort to keep the interface coherent, the old-school process does not offer any automatic way for it.
+Продукт получается визуально неконсистентным. То есть страницы немного разные, или не части интерфейса, которые должны быть согласованы, выглядят по разному. Требуются отдельные специальные усилия, чтобы всё приводить к единому стилю и предложенный процесс не предлагает никакого решения сделать это автоматически.
 
-The next thing is posible inconsistency in code. Especially in large websites the process is very risky in this sense. And for a set of websites sharing the same style, it is very very challengable not to repeat yourself in code.
+Код может быть неконсистнтным. Особенно на больних вебсайтах. Когда мы тут подправили, здесь подкрутили, часто бывает, что появляется копипаст или неиспользуемый код неудалён или вообще всё надо было делать по-другому. Опять же, вполне возможно держать всё в порядке, но на это требуются специальные усилия.
 
-Then, if it is needed to provide visual changes in the interface, it might be tricky. Asuming the inconsistent code we have, even a little visual change such as new styles for all the buttons or controls can be difficult thing to do.
+Если нужно в интерфейсе что-то изменить, это может быть сложным. Даже если говорить о каком-то небольшом изменении вроде "новый вид всех кнопок или всех контролов форм на сайте", задача не такая уж и тривиальная, просто потому что мест с этими контролами может быть очень много и везде написан разный css.
 
-The old-school process is time-consuming as it makes us to overcome the inconsistency chanllenge all the time.
+Всё это занимает много времени ведь с неконсистетностью мы боремся каждый раз.
 
-And, no matter how successful we are in current iteration, it is more likely that we get the same unmantainable result next time. I say "unmaintainable" meaning that all this challenges appear again. So, we may have fixed the interface but we did not fix anything in the proccess.
+И даже не имеет значения насколько успешно мы с нею боремся, потому что в следующей итерации это проблемы всплывут снова. Мы может быть и исправляем что-то в коде или интерфейсе, но недостатки процесса всегда сохраняются.
 
-## 7. Websites are systems
+## 7. Веб сайт как система
+
+С этими проблемами сталкиваются веб разработчики по всему миру, и од
 
 So, the recent strong movement in the frontend development is to understand that we  are not coding the pages. We are developing websites, which are systems much more complex than just a set of pages.
 
@@ -135,7 +137,7 @@ This code belongs to a pattern library of one client of ours. They are a very bi
 
 These are the style files.
 
-If we open one of them, for example _molecules.scss, you can see that inside are comments which document the code. This is the KSS syntax. It says what is the compoennt below, what markup it needs, what are its possible modifications.
+If we open one of them, for example _molecules.scss, you can see that inside are comments which document the code. This is the KSS syntax. It says what is the component below, what markup it needs, what are its possible modifications.
 
 Then in `package.json` of this project you can see that there is `sc5-styleguide` package installed. This means that I can run it.
 
