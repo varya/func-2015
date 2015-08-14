@@ -732,16 +732,22 @@ margin-bottom: 25px;
 </style>
 
 ## Автоматизировано
+{: .automate }
 
-* `gulp test:visual`<br/>
-Сравнивает локальную копию с каноничными скриншотами
+* `gulp test:visual:update` — обновляет базу скриншотов
+* `gulp test:visual` — сравнивает локальную копию с базой
+![](pictures/gemini.png)
 
-TODO: вставить картинку из консоли
+### Можно использовать для **continuous integration**!
 
-* `gulp test:visual:update`<br/>
-Обновляет каноничные скриншоты с продакшена
-
-Можно использовать для **continuous integration**!
+<style>
+.automate ul {
+  margin-bottom: 0.5em;
+}
+.automate h3 {
+  font-size: 1.25em;
+}
+</style>
 
 ## Что нам дал SC5 Style Guide
 {: .benefits }
@@ -821,7 +827,7 @@ TODO: вставить картинку из консоли
 Варя Степанова, SC5 Online<br/>
 [@toivonens](https://twitter.com/toivonens){: .twitter }
 
-### [varya.me/wsd-2015](http://varya.me/wsd-2015/)
+### [varya.me/func-2015](http://varya.me/func-2015/)
 
 <style>
 .thanks h3 {
