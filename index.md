@@ -591,7 +591,7 @@ About fly lady.
 
 * `npm install sc5-styleguide`
 * CSS, SCSS, SASS, LESS
-* Совмстимо с Gulp и Grunt
+* Совместимо с Gulp и Grunt
 * Живой стайлгайд
 * Документация в коде, KSS-синтаксис
 * Шаблоны (AngularJS директивы)
