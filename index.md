@@ -306,6 +306,10 @@ About fly lady.
 ## Метод старой школы
 {: .old-school }
 
+<div class="old-school-cont" markdown="1">
+
+<div class="cycle"></div>
+
 * Интерфейс неоднородный
 * Запутанный код
 * Маленькие изменения на самом деле большие
@@ -313,56 +317,60 @@ About fly lady.
 * <b>Сложно поддерживать</b>
 {: .list }
 
-<div class="cycle"></div>
+</div>
 
 <!-- time conhard to edit/change/keep up-to-date)-->
 
 <style>
-.old-school .cycle::before {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  margin-left: -400px;
-  content: "";
-  width: 800px;
-  height: 500px;
+
+.old-school-cont {
+  display: flex;
+}
+
+.old-school .cycle {
+  order: 1;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: block;
+  text-align: center;
   border-radius: 50%;
-  border: #31727d 5px solid;
-  display: inline-block;
+  border: #31727d 10px solid;
+  margin-right: 15px;
 }
 .old-school .cycle::after {
   position: absolute;
   top: 50px;
   left: 50%;
-  margin-left: -420px;
+  margin-left: -160px;
   content: "";
-  width: 840px;
-  height: 520px;
+  width: 340px;
+  height: 540px;
   display: inline-block;
   background-image:
-    -webkit-radial-gradient(center center, ellipse cover, #31727d 0, #31727d 10px, transparent 10px),
-    -webkit-radial-gradient(center center, ellipse cover, #31727d 0, #31727d 10px, transparent 10px),
-    -webkit-radial-gradient(center center, ellipse cover, #31727d 0, #31727d 10px, transparent 10px);
+    -webkit-radial-gradient(center center, ellipse cover, #31727d 0, #31727d 15px, transparent 15px),
+    -webkit-radial-gradient(center center, ellipse cover, #31727d 0, #31727d 15px, transparent 15px),
+    -webkit-radial-gradient(center center, ellipse cover, #31727d 0, #31727d 15px, transparent 15px);
   background-repeat:
     no-repeat,
     no-repeat,
     no-repeat,
     no-repeat;
   background-position:
-    65px 100px,
-    800px 195px,
-    410px 485px;
+    0px 30px,
+    105px 235px,
+    300px 65px;
   background-size:
-    40px 40px,
-    40px 40px,
-    40px 40px;
+    30px 30px,
+    30px 30px,
+    30px 30px;
 }
 
 .old-school .list {
-    margin-left: 100px;
-    background: white;
-    margin-top: 0;
-    padding-top: 40px;
+  order: 2;
+  background: #fff;
+  margin-top: 0;
+  padding-top: 2em;
 }
 </style>
 
