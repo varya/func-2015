@@ -170,7 +170,7 @@ About fly lady.
   background-size: cover;
 }
 .progress-chapter h2 {
-  text-shadow: 0 0 5px rgba(0,0,0, 0.5);
+  text-shadow: 0 0 15px rgba(0,0,0, 0.75);
 }
 </style>
 
