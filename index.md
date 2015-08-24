@@ -41,6 +41,12 @@ style: |
         width:0.72em;
         height:0.72em;
         }
+    .shout.slide {
+      background-color: #ef4942;
+    }
+    .shout.slide h2 {
+      color: #fff;
+    }
 ---
 
 # Сначала стайлгайд {#Cover}
@@ -148,6 +154,9 @@ About fly lady.
 
 ## Улучшение процесса разработки
 {: .chapter }
+
+## Проблема
+{: .shout }
 
 ## Метод старой школы
 {: .cycle }
@@ -373,6 +382,9 @@ About fly lady.
   padding-top: 2em;
 }
 </style>
+
+## Решение
+{: .shout }
 
 ## Websites are systems
 {: .anna}
@@ -611,6 +623,9 @@ About fly lady.
 * Показывает компоненты переменных
 * Быстрое редактирование
 
+## На большом проекте
+{: .shout }
+
 ## Наш опыт: библиотека компонент
 {: .cross-company }
 
@@ -710,7 +725,25 @@ margin-bottom: 25px;
 }
 </style>
 
-## Изменения в мозгу
+## На маленьком проекте
+{: .shout .small-project }
+
+<!-- TODO: фото кота -->
+
+<style>
+.small-project.slide h2 {
+  font-size: 100px;
+}
+</style>
+
+## Homepage
+
+<!-- varya.me -->
+
+## Итак,
+{: .shout }
+
+## Изменения сознания
 {: .mindset }
 
 ###До
