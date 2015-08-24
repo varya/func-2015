@@ -41,6 +41,13 @@ style: |
         width:0.72em;
         height:0.72em;
         }
+    body {
+      font-family: 'PT Sans', sans-serif;
+      font-size: 24px;
+    }
+    .slide h2 {
+      font-size: 52px; /* for cyrilic */
+    }
     .shout.slide {
       background-color: #ef4942;
     }
