@@ -114,13 +114,13 @@ style: |
   background-position: top right;
   border: #999 solid 5px;
   float: left;
-  margin-top: -2em;
+  margin-top: -1em;
   margin-right: 2em;
   background-size: 100%;
 }
 .varya .slide__body
 {
-  margin-top: 5em;
+  margin-top: 2.5em;
 }
 .varya a
 {
@@ -136,7 +136,7 @@ style: |
   height: 1.5em;
   background-image:url('pictures/twitter-logo.png');
   background-size: cover;
-  margin-right: 0.5em;
+  margin-right: 0.25em;
   margin-bottom: -0.5em;
 }
 </style>
