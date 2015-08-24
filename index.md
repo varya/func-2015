@@ -152,8 +152,20 @@ About fly lady.
 
 </style>
 
-## Улучшение процесса разработки
-{: .chapter }
+## Прогресс
+{: .shout .progress-chapter }
+
+### Мы делаем
+
+<style>
+.progress-chapter {
+  background-image:url('pictures/progress.jpg');
+  background-size: cover;
+}
+.progress-chapter h2 {
+  text-shadow: 0 0 5px rgba(0,0,0, 0.5);
+}
+</style>
 
 ## Проблема
 {: .shout }
