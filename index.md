@@ -54,6 +54,9 @@ style: |
     .shout.slide h2 {
       color: #fff;
     }
+    .no-title h2 {
+      display: none;
+    }
 ---
 
 # Сначала стайлгайд {#Cover}
@@ -257,7 +260,7 @@ About fly lady.
 </style>
 
 ## Процесс с потерями
-{: .dash-process }
+{: .dash-process .no-title }
 
 ### Должно быть так
 <div class="stage" style="width:200px">макет</div>
