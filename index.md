@@ -48,6 +48,14 @@ style: |
     .slide h2 {
       font-size: 52px; /* for cyrilic */
     }
+    .slide>div {
+      font-size: 32px;
+      padding-top: 50px;
+    }
+    .slide ol li,
+    .slide ul li {
+      text-indent: -1em;
+    }
     .shout.slide {
       background-color: #ef4942;
     }
@@ -117,13 +125,13 @@ style: |
   background-position: top right;
   border: #999 solid 5px;
   float: left;
-  margin-top: -1em;
+  margin-top: 0;
   margin-right: 2em;
   background-size: 100%;
 }
 .varya .slide__body
 {
-  margin-top: 2.5em;
+  margin-top: 2em;
 }
 .varya a
 {
@@ -165,8 +173,6 @@ About fly lady.
 ## Прогресс
 {: .shout .progress-chapter }
 
-### Мы делаем
-
 <style>
 .progress-chapter {
   background-image:url('pictures/progress.jpg');
@@ -202,7 +208,7 @@ About fly lady.
 <style>
 .cycle .states {
   display: flex;
-  margin-top: 4em;
+  margin-top: 3em;
 }
 
 .cycle .state {
@@ -212,7 +218,7 @@ About fly lady.
   display: block;
   text-align: center;
   line-height: 200px;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .cycle .state p {
@@ -263,8 +269,8 @@ About fly lady.
 {: .dash-process .no-title }
 
 ### Должно быть так
-<div class="stage" style="width:200px">макет</div>
-<div class="stage" style="width:200px">вёрстка</div>
+<div class="stage" style="width:175px">макет</div>
+<div class="stage" style="width:175px">вёрстка</div>
 <div class="stage">интеграция</div>
 
 <div class="next reality" markdown="1">
@@ -274,8 +280,8 @@ About fly lady.
 <div class="next">
   <div class="stage stage_cross stage_invisible" style="position: absolute; left: 520px; top: 370px">вёрстка</div>
   <div class="stage" style="margin-left: 500px;width:150px">макет</div>
-  <div class="stage" style="position: absolute; width: 175px">вёрстка</div>
-<br/>
+  <div class="stage" style="position: absolute; width: 175px;left: 855px;top: 11.65em;">вёрстка</div>
+
 ...снова и снова!
 
 </div>
@@ -285,8 +291,16 @@ About fly lady.
 
 <style>
 
+.dash-process {
+  font-size: 32px;
+}
+
+.dash-process>div {
+  padding-top: 100px;
+}
+
 .dash-process h3 {
-  margin-top: 3em;
+  margin-top: 1em;
   font-weight: bold;
 }
 .dash-process .stage {
@@ -316,8 +330,8 @@ About fly lady.
   position: absolute;
   width: 120%;
   height: 100%;
-  top: 15%;
-  left: -10%;
+  top: -50px;
+  left: 10px;
   opacity: 0.4;
   background: repeating-linear-gradient(
     45deg,
@@ -354,8 +368,13 @@ About fly lady.
 
 <style>
 
+.old-school ul li {
+  text-indent: -2em;
+}
+
 .old-school-cont {
   display: flex;
+  padding-top: 0.5em;
 }
 
 .old-school .cycle {
@@ -401,7 +420,7 @@ About fly lady.
   order: 2;
   background: #fff;
   margin-top: 0;
-  padding-top: 2em;
+  padding-top: 0;
 }
 </style>
 
@@ -418,6 +437,12 @@ About fly lady.
 <figcaption>Анна Дебенхэм</figcaption>
 
 <style>
+.anna {
+  font-size: 32px;
+}
+.anna>div {
+  padding-top: 50px;
+}
 .anna h2 {
   display: none;
 }
@@ -464,7 +489,7 @@ About fly lady.
 <style>
 .component-cycle .components {
   display: flex;
-  margin-top: 4em;
+  margin-top: 2.5em;
 }
 .component-cycle .component {
   position: relative;
@@ -600,12 +625,12 @@ About fly lady.
 
 <style>
 .living-styleguide .example {
-  margin-top: 2em;
+  margin-top: 1.5em;
+  font-size: 24px;
 }
 .living-styleguide p {
   margin-top: 0;
-  margin-bottom: 0.75em;
-  color: #666;
+  margin-bottom: 0.5em;
 }
 </style>
 
@@ -621,7 +646,8 @@ About fly lady.
 [styleguide.sc5.io](http://styleguide.sc5.io)
 
 <style>
-.tool {
+.tool>div {
+  text-align: center;
   font-size: 4em;
 }
 </style>
@@ -650,6 +676,12 @@ About fly lady.
 
 ![](pictures/cross.jpg)
 
+<style>
+.cross-company>div {
+  text-align: center;
+}
+</style>
+
 ## Визуальные юнит тесты
 {: .unit-tests }
 
@@ -676,16 +708,23 @@ margin-bottom: 25px;
 
 * `gulp test:visual:update` — обновляет базу скриншотов
 * `gulp test:visual` — сравнивает локальную копию с базой
-![](pictures/gemini.png)
+![](pictures/gemini.png){: .test-pic }
 
 ### Можно использовать для **continuous integration**!
 
 <style>
+.automate>div {
+  font-size: 28px;
+}
 .automate ul {
   margin-bottom: 0.5em;
 }
+.automate .test-pic {
+  margin-left: 1em;
+}
 .automate h3 {
   font-size: 1.25em;
+  margin-top: -0.5em;
 }
 </style>
 
@@ -703,13 +742,20 @@ margin-bottom: 25px;
 * {: .main } <b>Разработка "сначала стайлгайд"</b>
 
 <style>
+.benefits>div {
+  font-size: 28px;
+}
+.benefits h2 {
+  font-size: 48px;
+}
 .benefits ul {
     position: relative;
 }
 .benefits .unit-4 {
     position: absolute;
-    top: 3em;
-    left: 500px;
+    top: 2.75em;
+    left: 630px;
+    line-height: 1.25em;
     color: #f16b66;
 }
 .benefits .unit-4::before {
@@ -724,8 +770,9 @@ margin-bottom: 25px;
 }
 .benefits .unit-2 {
     position: absolute;
-    top: 9em;
-    left: 500px;
+    top: 8.75em;
+    left: 645px;
+    line-height: 1.25em;
     color: #f16b66;
 }
 .benefits .unit-2::before {
@@ -747,17 +794,28 @@ margin-bottom: 25px;
 ## На маленьком проекте
 {: .shout .small-project }
 
-<!-- TODO: фото кота -->
-
 <style>
 .small-project.slide h2 {
   font-size: 100px;
 }
 </style>
 
-## Homepage
+## Личный опыт
+{: .own-styleguide }
 
-<!-- varya.me -->
+[bit.ly/small-styleguide](http://bit.ly/small-styleguide){: .article-link }
+
+<style>
+.own-styleguide>div {
+  text-align: center;
+}
+.own-styleguide h2 {
+  margin-bottom: 3em;
+}
+.own-styleguide .article-link {
+  font-size: 80px;
+}
+</style>
 
 ## Итак,
 {: .shout }
