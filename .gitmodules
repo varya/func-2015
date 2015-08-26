@@ -7,3 +7,6 @@
 [submodule "shower"]
 	path = shower
 	url = https://github.com/shower/core.git
+[submodule "sc5-theme"]
+	path = sc5-theme
+	url = https://github.com/varya/shower-sc5.git
