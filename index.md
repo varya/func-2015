@@ -728,7 +728,7 @@ margin-bottom: 25px;
 }
 </style>
 
-## Что нам дал SC5 Style Guide
+## Стайл гайд бибилиотеки блоков
 {: .benefits }
 
 * Живая документация компонентов
@@ -761,9 +761,9 @@ margin-bottom: 25px;
 .benefits .unit-4::before {
     content: "}";
     margin-right: 0.5em;
-    font-size: 6.5em;
+    font-size: 7em;
     position: absolute;
-    top: -0.07em;
+    top: -0.04em;
     left: -0.5em;
     width: auto;
     color: #999;
@@ -781,7 +781,7 @@ margin-bottom: 25px;
     font-size: 3.5em;
     position: absolute;
     font-weight: 800;
-    top: -0.07em;
+    top: 0.05em;
     left: -1em;
     width: auto;
     color: #999;
