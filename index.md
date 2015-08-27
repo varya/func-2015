@@ -800,17 +800,21 @@ margin-bottom: 25px;
 }
 </style>
 
-## Личный опыт
+## Стайлгайд странички кота
 {: .own-styleguide }
 
 [bit.ly/small-styleguide](http://bit.ly/small-styleguide){: .article-link }
 
+* Видно, чего не хватает
+* Всё надо переделать
+* Дальше будет только лучше
+
 <style>
-.own-styleguide>div {
+.own-styleguide>div .article-link {
   text-align: center;
 }
 .own-styleguide h2 {
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
 }
 .own-styleguide .article-link {
   font-size: 80px;
